@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cat Food Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+  </head>
+  <!-- BODY -->
+  <body>
+    <!-- HEADER -->
+    <header>
+      <img
+        id="logo"
+        src="images/logo.png"
+        alt="Logo: Cat Food Calculator"
+        title="Logo: Cat Food Calculator"
+      />
+    </header>
+
+    <!-- MAIN -->
+    <div id="wrapper">
+      <main>
+        <br />
+        <!-- intro -->
+        <h1 class="colorSchemeNormal">How much my cat should eat?</h1>
+        <p id="intro">Give me some information and I'll tell you how many grams of food your
+          cat needs per day!🙂
+        </p>
+        <img
+          id="arrow"
+          src="images/down_arrow.png"
+          alt="down arrow"
+          title="down arrow"
+        />
+
+        <!-- BEGIN div that hiddes after submitting -->
+        <div id="hideForm">
+          <!-- BEGIN form -->
+          <form id="myForm">
+            <fieldset>
+              <p id="mandatory" class="colorSchemeNormal">*These fields are mandatory</p>
+              <!-- nameCat -->
+              <label
+                ><p class="colorSchemeNormal">Cat's name</p>
+                <p class="marginBottom">
+                  <input
+                    class="nameCat"
+                    type="text"
+                    name="nameCat"
+                    size="15"
+                    maxlength="30"
+                  /></p
+              ></label>
+              <!-- age -->
+              <label
+                ><p class="colorSchemeNormal">Age</p>
+                <p class="marginBottom">
+                  <select class="age" name="age">
+                    <option value="youngerKitten">0-4 months</option>
+                    <option value="olderKitten">5-12 months</option>
+                    <option value="adult" selected>1-6 years</option>
+                    <option value="senior">&gt;6 years</option>
+                  </select>
+                </p></label
+              >
+              <!-- weight -->
+              <label
+                ><p class="colorSchemeNormal">*Cat's weight (enter a value in kg, e.g. 3.5)</p>
+                <p class="marginBottom">
+                  <input
+                    id="weight"
+                    type="text"
+                    name="weight"
+                    size="15"
+                    maxlength="30"
+                  /></p
+              ></label>
+              <!-- isSterilised -->
+              <label
+                ><p class="colorSchemeNormal">Spayed, Neutered or Intact</p>
+                <p class="marginBottom">
+                  <select class="isSterilised" name="isSterilised">
+                    <option value="intact">intact</option>
+                    <option value="spayed">spayed/neutered</option>
+                  </select>
+                </p></label
+              >
+              <!-- activity -->
+              <label
+                ><p class="colorSchemeNormal">Active or sedentary lifestyle</p>
+                <p class="marginBottom">
+                  <select class="lifestyle" name="activity">
+                    <option value="active">active</option>
+                    <option value="sedentary">sedentary</option>
+                  </select>
+                </p></label
+              >
+              <!-- isOverWeight -->
+              <label
+                ><p class="colorSchemeNormal">Is overweight?</p>
+                <p class="marginBottom">
+                  <select class="overweight" name="isOverweight">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+                </p></label
+              >
+              <!-- nameCatFood -->
+              <label
+                ><p class="colorSchemeNormal">Enter the name of the food you use</p>
+                <p class="marginBottom">
+                  <input
+                    class="nameFood"
+                    type="text"
+                    name="nameCatFood"
+                    size="15"
+                    maxlength="30"
+                  /></p
+              ></label>
+              <!-- caloriesOfFood -->
+              <label
+                ><p class="colorSchemeNormal">*Enter calories per kg of food, e.g. 3800</p>
+                <p class="marginBottom">
+                  <input
+                    class="calories"
+                    type="text"
+                    name="caloriesOfFood"
+                    size="15"
+                    maxlength="30"
+                  />
+                </p>
+                <!-- submit button -->
+                <p class="marginBottom">
+                  <button type="button" class="btn submit">Submit</button>
+                </p></label
+              >
+            </fieldset>
+          </form>
+          <!-- END form -->
+        </div>
+        <!-- END div that hiddes after submitting -->
+
+        <!-- Here will be displayed the result -->
+        <div id="output"></div>
+
+        <!-- Refresh button that appears after submitting -->
+        <div id="refreshButton"><button class="btn">Try again</button></div>
+      </main>
+      <!-- FOOTER  -->
+      <footer>
+        <ul>
+          <li>Author: Natalia Domanska</li>
+        <li>E-mail: <a href="mailto:nataliaidomanska@gmail.com"
+            >nataliaidomanska@gmail.com</a
+          >
+        </li>
+        <li>Copyright&copy;</li>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
